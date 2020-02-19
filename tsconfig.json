@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+      // "outDir": "./built/",
+      // "sourceMap": true,
+      "strict": true,
+			
+			/*
+			Need to set the following to avoid issues when assigning NULL values
+			to some types in the newer versions of typescript
+			https://github.com/Microsoft/TypeScript/issues/8322
+			*/
+			"strictNullChecks": false,
+			
+			/*
+			Need to set the following value, otherwise need 
+			to have all the properties on classes initialized by default.
+			https://stackoverflow.com/a/50241920/1178368
+			*/
+			"strictPropertyInitialization": false,
+			"allowJs": true,
+			"noImplicitReturns": true,
+      "noImplicitAny": true,
+      "module": "es2015",
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "moduleResolution": "node",
+      "target": "es5",
+      "lib": [
+        "es2016",
+        "dom"
+    ]
+  },
+  "include": [
+       "./dev/**/*"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "bluetone-app",
+  "version": "1.0.0",
+  "description": "Front End Proprietary Boilerplate Code",
+  "main": "index.js",
+  "scripts": {
+    "build-dev-1": "webpack-dev-server --open --hot",
+    "build-dev-2": "webpack --progress --hide-modules",
+    "build-dev-hot": "webpack-dev-server --hot",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "debug": "concurrently \"NODE_ENV=development node --inspect index.js\" \"npm run dev\""
+  },
+  "keywords": [],
+  "author": "Agustin Garzon",
+  "devDependencies": {
+    "axios": "^0.19.2",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.5",
+    "vue": "^2.6.11",
+    "vue-class-component": "^7.2.3",
+    "vue-loader": "^15.9.0",
+    "vue-property-decorator": "^8.4.0",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify": "^2.2.13",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}

@@ -1,0 +1,20 @@
+{
+    "files.exclude": {
+        "**/node_modules": true
+		},
+		"telemetry.enableCrashReporter": false,
+		"telemetry.enableTelemetry": false,
+		"html.format.maxPreserveNewLines": 5,
+		"vetur.format.enable": true,
+		"vetur.format.defaultFormatterOptions": {
+			"js-beautify-html": {
+				"wrap_attributes": "auto"
+			},
+			"prettyhtml": {
+				"printWidth": 60,
+				"singleQuote": true,
+				"wrapAttributes": false,
+				"sortAttributes": false
+			}
+		}
+}
