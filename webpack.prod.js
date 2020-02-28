@@ -9,19 +9,16 @@ var proxy = 'localhost:2344';
 
 module.exports = {
 	entry: {
-		// build: './client/main_their.ts',
-		ADMIN: './dev/Admin.ts',
-		USER_SIGNUP: './dev/UserSignup.ts',
-		USER: './dev/User.ts',
-		USER_LOGIN: './dev/Login.ts',
-		CART: './dev/Cart.ts',
-		// MAIN: './client/components/AdminTemplate/Trigger.ts',
+		ADMIN: './dev/AdminStart.ts',
 	},
 	output: {
-		path: path.resolve(__dirname, './dist_prod/'),
-		publicPath: '/dist_prod/',
+		path: path.resolve(__dirname, './dist/'),
+		publicPath: '/dist/',
 		filename: '[name].js',
 		libraryTarget: 'this',
+	},
+	optimization:{
+		minimize: true
 	},
 	module: {
 		rules: [
@@ -105,12 +102,12 @@ module.exports = {
 		// make sure to include the plugin for the magic
 		new VueLoaderPlugin(),
 
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: false,
-      compress: {
-        warnings: false
-      }
-    }),
+    // new webpack.optimize.UglifyJsPlugin({
+    //   sourceMap: false,
+    //   compress: {
+    //     warnings: false
+    //   }
+    // }),
 
 
 		// enable HMR globally
