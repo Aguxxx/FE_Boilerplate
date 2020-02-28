@@ -1,8 +1,9 @@
 
 import Vue from "vue";
-import VueTestComponent from "../components/VueTestComponent.vue";
 import vuetify from "vuetify"
 import { VUETIFY_CONFIG } from "./Main";
+
+import Admin from "../components/Admin.vue";
 
 declare var $: any;
 
@@ -21,10 +22,9 @@ function HelloWorld(): void {
 	new Vue({
 		el: '#app-main',
 		data: {
-			MotivationalPhrase: 'You so can do it!',
 		},
 		components: {
-			VueTestComponent
+			Admin
 		},
 
 		/* ASSIGN VUETIFY */
@@ -36,12 +36,7 @@ function HelloWorld(): void {
 
 
 $(document).ready(function () {
-
-	console.log("inducing delay of 2 secs...");
-	
-	setTimeout(() => {
 		HelloWorld();
-	}, 2000);
 })
 
 

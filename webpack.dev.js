@@ -12,7 +12,7 @@ module.exports = {
 		minimize: false,
 	},
 	entry: {
-		TEST: './dev/Test.ts',
+		ADMIN: './dev/AdminStart.ts',
 	},
 	output: {
 		path: path.resolve(__dirname, './dist/'),
@@ -65,18 +65,18 @@ module.exports = {
 			vue$: 'vue/dist/vue.esm.js'
 		}
 	},
-	// devServer: {
-	//   historyApiFallback: true,
-	//   noInfo: true,
-	//   overlay: true,
-	//   proxy: {
-	//     '/api': {
-	//       target: 'http://localhost:3001',
-	//       changeOrigin: true,
-	//       secure: false
-	//     }
-	//   }
-	// },
+	devServer: {
+		// historyApiFallback: true,
+		// noInfo: true,
+		overlay: true,
+		proxy: [{
+			context: ['/specdev/**', '/commonassets/**', '/jpgx/**'
+			, '/images/**'],
+			target: 'http://localhost:2344',
+			changeOrigin: true,
+			secure: false
+		}]
+	},
 	performance: {
 		hints: false
 	},

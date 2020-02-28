@@ -6,11 +6,8 @@
   "scripts": {
     "build-dev-hot": "webpack-dev-server --hot --env dev --open",
 		
-		"build-dev-1": "webpack-dev-server --open --hot",
-    "build-dev-2": "webpack --progress --hide-modules",
-		
-		"build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "debug": "concurrently \"NODE_ENV=development node --inspect index.js\" \"npm run dev\""
+		"build-dev": "webpack --env dev",
+		"build-prod": "webpack --env prod"
   },
   "keywords": [],
   "author": "Agustin Garzon",
